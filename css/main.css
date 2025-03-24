@@ -345,8 +345,8 @@ a {
     background: var(--primary-color);
 }
 
-.energy-button#active-button .energy-heading h3,
-.energy-button:hover .energy-heading h3 {
+.energy-button#active-button .energy-heading .energy-head,
+.energy-button:hover .energy-heading .energy-head {
     color: var(--white-color);
 }
 
@@ -371,11 +371,12 @@ a {
     display: none;
 }
 
-.energy-heading h3 {
+.energy-heading .energy-head {
     font-size: 1rem;
     font-weight: 500;
     color: var(--heading-color);
     transition: color 0.3s;
+    font-family: "Merriweather", serif;
 }
 
 .energy-content {

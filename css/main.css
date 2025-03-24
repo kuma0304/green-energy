@@ -1,0 +1,440 @@
+/*  
+Color Scheme (Analogous - Green/Blue)  
+#388E3C - Primary Green  
+#00796B - Teal  
+*/
+
+/* ============== Start: Variables ============== */
+:root {
+    --primary-color: #388E3C;
+    --secondary-color: #00796B;
+    --heading-color: #222;
+    --body-color: #8493a8;
+    --black-color: #000;
+    --white-color: #fff;
+    --light-gray: #eaeff7;
+    --body-text-color: #a6aee1;
+}
+
+/* ============== End: Variables ============== */
+
+/* ============== Start: Global Style ============== */
+* {
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 12px;
+    /* .75rem on mobile */
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: "Merriweather", serif;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1170px;
+    padding: 0 2rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-body {
+    color: var(--body-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+.site-button {
+    font-size: 1.1rem;
+    color: var(--white-color);
+    margin-bottom: 0;
+    background-color: var(--primary-color);
+    padding: 13px 38px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+.site-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.space-top-1 {
+    padding-top: 1em;
+}
+
+.space-top-2 {
+    padding-top: 2em;
+}
+
+.space-top-3 {
+    padding-top: 3em;
+}
+
+.space-top-4 {
+    padding-top: 4em;
+}
+
+.space-bottom-1-2 {
+    padding-bottom: .5em;
+}
+
+.space-bottom-1 {
+    padding-bottom: 1em;
+}
+
+.space-bottom-2 {
+    padding-bottom: 2em;
+}
+
+.space-bottom-3 {
+    padding-bottom: 3em;
+}
+
+.space-bottom-4 {
+    padding-bottom: 4em;
+}
+
+.image-responsive {
+    max-width: 100%;
+}
+
+.site-heading {
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: var(--heading-color);
+}
+
+.site-description {
+    font-size: 1.1rem;
+    color: var(--body-color);
+}
+
+
+@media only screen and (min-width: 30rem) {
+    html {
+        font-size: 16px;
+        /* 1rem on tablet/desktop */
+    }
+}
+
+/* ============== End: Global Style ============== */
+
+
+/* ============== Start: Header ============== */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.company-name {
+    font-size: 1.7rem;
+    display: inline-block;
+    font-weight: 700;
+    color: var(--black-color);
+}
+
+.responsive-menu-active .site-menu {
+    left: 0;
+}
+
+.site-menu {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: -110%;
+    top: 0;
+    transition: all 500ms;
+    background-color: var(--black-color);
+}
+
+.site-menu ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.site-menu ul li {
+    width: 100%;
+}
+
+.site-menu ul li a {
+    width: 100%;
+    display: inline-block;
+    padding: 12px 15px;
+    border-bottom: 1px solid #292929;
+    color: var(--white-color);
+}
+
+.site-menu ul li a:hover {
+    color: var(--primary-color);
+}
+
+.close-menu {
+    text-align: right;
+    padding: 20px 15px;
+}
+
+.close-menu a {
+    font-size: 1.4rem;
+    color: var(--white-color);
+}
+
+.close-menu a:hover,
+.close-menu a:focus {
+    color: var(--primary-color);
+}
+
+.nav-icons .hamburger a {
+    color: var(--black-color);
+    font-size: 1.4rem;
+}
+
+.nav-icons .hamburger:hover,
+.nav-icons .hamburger:focus {
+    color: var(--primary-color);
+}
+
+@media only screen and (min-width: 30rem) {
+    #header {
+        padding: 10px 0px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .site-menu {
+        height: inherit;
+        width: inherit;
+        position: relative;
+        z-index: 1;
+        background-color: inherit;
+        left: inherit;
+        top: inherit;
+    }
+
+    .close-menu {
+        display: none;
+    }
+
+    .site-menu ul {
+        flex-direction: row;
+    }
+
+    .site-menu ul li a {
+        padding: 6px 15px;
+        border-bottom: none;
+        color: var(--black-color);
+    }
+
+    .site-menu ul li {
+        margin-right: 20px;
+    }
+
+    .site-menu ul li:last-child {
+        margin-right: 0;
+    }
+
+    .navigation nav {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* ============== End: Header ============== */
+
+
+/* ============== Start: Banner ============== */
+#main-hero {
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    background-image: url('../img/hero-bg.jpg');
+    padding: 7em 0;
+}
+
+.hero-head {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.hero-desc {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+@media only screen and (min-width: 30rem) {
+    .hero-head {
+        font-size: 2.6rem;
+    }
+
+    #main-hero {
+        padding: 11em 0;
+    }
+}
+
+/* ============== End: Banner ============== */
+/* ============== Start: Energy ============== */
+
+.energy-action {
+    display: flex;
+    gap: 30px;
+}
+
+.energy-button {
+    box-shadow: 0 0 3px #ddd;
+    transition: background 0.3s;
+    border-radius: 90px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    text-align: left;
+    font-size: inherit;
+    box-shadow: 0px 4px 12px 0 rgba(55, 70, 85, 0.3);
+}
+
+.energy-button#active-button,
+.energy-button:hover {
+    background: var(--primary-color);
+}
+
+.energy-button#active-button .energy-heading h3,
+.energy-button:hover .energy-heading h3 {
+    color: var(--white-color);
+}
+
+
+.energy-icon {
+    background: linear-gradient(0deg, #fff, #C6FFF8);
+    height: 45px;
+    width: 45px;
+    border-radius: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+
+.energy-icon i {
+    font-size: 1.1rem;
+}
+
+.energy-heading {
+    display: none;
+}
+
+.energy-heading h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--heading-color);
+    transition: color 0.3s;
+}
+
+.energy-content {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.energy-image {
+    position: relative;
+    order: 2;
+}
+
+.energy-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+@media only screen and (min-width: 60rem) {
+    .energy-action {
+        flex-direction: row;
+    }
+
+    .energy-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .energy-image {
+        width: 25%;
+    }
+
+    .energy-text {
+        width: 75%;
+    }
+
+    .energy-heading {
+        display: block;
+    }
+
+    .energy-icon {
+        margin-right: 15px;
+    }
+
+    .energy-button {
+        flex: 1;
+    }
+
+    .energy-image {
+        order: 0;
+    }
+}
+
+/* ============== End: Energy ============== */
+
+/* ============== Start: Footer ============== */
+.footer-copyright {
+    background-color: var(--light-gray);
+    padding: 17px 0;
+    text-align: center;
+}
+
+.copyright-text {
+    color: var(--heading-color);
+    font-size: 1.1em;
+}
+
+/* ============== End: Footer ============== */

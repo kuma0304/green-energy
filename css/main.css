@@ -147,7 +147,9 @@ a {
         font-size: 16px;
         /* 1rem on tablet/desktop */
     }
+}
 
+@media only screen and (min-width: 60rem) {
     .wrapper {
         padding: 0;
     }
@@ -431,6 +433,12 @@ a {
 /* ============== End: Energy ============== */
 
 /* ============== Start: Footer ============== */
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .footer-copyright {
     background-color: var(--light-gray);
     padding: 17px 0;
@@ -440,6 +448,32 @@ a {
 .copyright-text {
     color: var(--heading-color);
     font-size: 1.1em;
+}
+
+.footer-social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social li a {
+    height: 40px;
+    width: 40px;
+    background-color: var(--white-color);
+    border-radius: 40px;
+    display: inline-flex;
+    color: var(--heading-color);
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.footer-social li a:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
 }
 
 /* ============== End: Footer ============== */

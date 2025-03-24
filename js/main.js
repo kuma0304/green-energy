@@ -20,19 +20,19 @@ let buttons = document.querySelectorAll('.energy-button');
 let database = {
     solar: {
         title: "Affordable Solar Panels",
-        body: "Solar energy is a clean, renewable power source that harnesses sunlight to generate electricity. Our cutting-edge solar panels provide an efficient and sustainable solution for reducing carbon footprint and lowering energy costs.",
+        body: "Solar energy is a renewable power source that harnesses sunlight to generate electricity.",
         url: "./img/img-1.jpg",
         alt: "Solar Panels Installation"
     },
     wind: {
         title: "Wind Energy Solutions",
-        body: "Wind turbines convert the kinetic energy of wind into electrical power. Our wind energy systems are designed to maximize efficiency and provide a reliable, eco-friendly alternative to traditional power generation methods.",
+        body: "Wind turbines convert the kinetic energy of wind into electrical power.",
         url: "./img/img-2.jpg",
         alt: "Wind Turbines Landscape"
     },
     efficiency: {
         title: "Energy Efficiency Strategies",
-        body: "Improve your energy consumption with our comprehensive efficiency solutions. We offer smart technologies and strategies to reduce waste, lower costs, and create more sustainable living and working environments.",
+        body: "Improve your energy consumption with some comprehensive efficiency solutions.",
         url: "./img/img-3.jpg",
         alt: "Energy Efficiency Concept"
     }
@@ -57,9 +57,9 @@ function handleSelection(event) {
             <img class="image-responsive" src="${database[key].url}" alt="${database[key].alt}">
         </div>
         <div class="energy-text">
-            <h2 class="site-heading space-bottom-1-2">${database[key].title}</h2>
+            <h2 class="site-heading">${database[key].title}</h2>
             <p class="site-description">${database[key].body}</p>
-            <div class="space-top-2">
+            <div class="space-top-1">
                 <a href="#" class="site-button">Read More</a>
             </div>
         </div>
